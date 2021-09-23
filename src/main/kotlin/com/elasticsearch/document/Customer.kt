@@ -1,0 +1,23 @@
+package com.elasticsearch.document
+
+import org.springframework.data.annotation.Id
+import org.springframework.data.elasticsearch.annotations.Document
+
+
+@Document(indexName = "customer")
+class Customer {
+
+     @Id lateinit var id:String;
+     lateinit var firstName:String;
+     lateinit var lastName:String;
+     lateinit var age:Integer;
+
+     constructor(id:String, firstName:String, lastName:String, age:Integer){
+         this.id = id;
+         this.lastName = lastName;
+         this.firstName = firstName;
+         this.age = age;
+     }
+    constructor(){}
+
+}
